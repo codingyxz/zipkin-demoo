@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zipkin-1" />
+        <module name="btrace-spring" />
+        <module name="sender-kafka" />
+        <module name="zipkin-3" />
+        <module name="zipkin-2" />
+        <module name="btrace-plugin-utils" />
+        <module name="zipkin-5" />
+        <module name="btrace-plugin-servlet3" />
+        <module name="zipkin-4" />
+        <module name="btrace-opentracing" />
+        <module name="btrace-plugin-okhttp3" />
+        <module name="btracee-2" />
+        <module name="btracee-1" />
+        <module name="btrace-plugin-mybatis" />
+        <module name="btrace-autoconfig" />
+        <module name="btrace-plugin-servlet25" />
+        <module name="btrace-plugin-dubbo" />
+        <module name="sender-okhttp3" />
+        <module name="btrace-plugin-spring-service" />
+        <module name="btrace-plugin-springmvc" />
+        <module name="btrace-flink" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="btrace-autoconfig" options="-parameters" />
+      <module name="btrace-opentracing" options="-parameters" />
+      <module name="btrace-plugin-dubbo" options="-parameters" />
+      <module name="btrace-plugin-mybatis" options="-parameters" />
+      <module name="btrace-plugin-okhttp3" options="-parameters" />
+      <module name="btrace-plugin-servlet25" options="-parameters" />
+      <module name="btrace-plugin-servlet3" options="-parameters" />
+      <module name="btrace-plugin-spring-service" options="-parameters" />
+      <module name="btrace-plugin-springmvc" options="-parameters" />
+      <module name="btrace-plugin-utils" options="-parameters" />
+      <module name="btrace-spring" options="-parameters" />
+      <module name="btracee-1" options="-parameters" />
+      <module name="btracee-2" options="-parameters" />
+      <module name="sender-kafka" options="-parameters" />
+      <module name="sender-okhttp3" options="-parameters" />
+      <module name="zipkin-1" options="-parameters" />
+      <module name="zipkin-2" options="-parameters" />
+      <module name="zipkin-3" options="-parameters" />
+      <module name="zipkin-4" options="-parameters" />
+      <module name="zipkin-5" options="-parameters" />
+    </option>
+  </component>
+</project>

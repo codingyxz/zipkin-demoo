@@ -1,0 +1,16 @@
+
+spring:
+  application:
+    name: btracee-2
+
+btrace:
+  enabled: true
+  name: ${spring.application.name}
+  sender:
+#    type: http
+#    address: http://127.0.0.1:9411/api/v2/spans
+    topic: btrace_flink
+    type: kafka
+    address: 127.0.0.1:9092
+server:
+  port: 8091

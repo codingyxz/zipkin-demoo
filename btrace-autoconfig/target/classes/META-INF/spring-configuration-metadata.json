@@ -1,0 +1,59 @@
+{
+  "groups": [
+    {
+      "name": "btrace",
+      "type": "com.demoo.autoconfig.BtraceOpentracingProperties",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties"
+    },
+    {
+      "name": "btrace.sender",
+      "type": "com.demoo.autoconfig.BtraceOpentracingProperties$Sender",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties",
+      "sourceMethod": "getSender()"
+    },
+    {
+      "name": "btrace.sign",
+      "type": "com.demoo.autoconfig.BtraceOpentracingProperties$Sign",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties",
+      "sourceMethod": "getSign()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "btrace.name",
+      "type": "java.lang.String",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties"
+    },
+    {
+      "name": "btrace.sender.address",
+      "type": "java.lang.String",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties$Sender"
+    },
+    {
+      "name": "btrace.sender.topic",
+      "type": "java.lang.String",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties$Sender"
+    },
+    {
+      "name": "btrace.sender.type",
+      "type": "java.lang.String",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties$Sender"
+    },
+    {
+      "name": "btrace.sign.appkey",
+      "type": "java.lang.String",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties$Sign"
+    },
+    {
+      "name": "btrace.sign.appsecret",
+      "type": "java.lang.String",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties$Sign"
+    },
+    {
+      "name": "btrace.trace-id128-bit",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.demoo.autoconfig.BtraceOpentracingProperties"
+    }
+  ],
+  "hints": []
+}

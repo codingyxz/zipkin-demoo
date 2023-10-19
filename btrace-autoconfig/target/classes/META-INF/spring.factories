@@ -1,0 +1,7 @@
+## Auto Configuration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.demoo.autoconfig.TraceAutoConfiguration,\
+  com.demoo.autoconfig.TraceOkhttp3AutoConfiguration,\
+  com.demoo.autoconfig.TraceSpringServiceAutoConfiguration,\
+  com.demoo.autoconfig.TraceServletAutoConfiguration,\
+  com.demoo.autoconfig.TraceSpringMvcAutoConfiguration
