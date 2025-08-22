@@ -5,4 +5,5 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.demoo.autoconfig.TraceSpringServiceAutoConfiguration,\
   com.demoo.autoconfig.TraceServletAutoConfiguration,\
   com.demoo.autoconfig.TraceSpringMvcAutoConfiguration,\
-  com.demoo.autoconfig.TraceDubboAutoConfiguration
+  com.demoo.autoconfig.TraceDubboAutoConfiguration,\
+  com.demoo.autoconfig.TraceLogbackAutoConfiguration

@@ -15,6 +15,7 @@
         <module name="zipkin-5" />
         <module name="btrace-plugin-servlet3" />
         <module name="zipkin-4" />
+        <module name="btrace-plugin-logback" />
         <module name="btrace-opentracing" />
         <module name="btrace-plugin-okhttp3" />
         <module name="btracee-2" />
@@ -35,6 +36,7 @@
       <module name="btrace-autoconfig" options="-parameters" />
       <module name="btrace-opentracing" options="-parameters" />
       <module name="btrace-plugin-dubbo" options="-parameters" />
+      <module name="btrace-plugin-logback" options="-parameters" />
       <module name="btrace-plugin-mybatis" options="-parameters" />
       <module name="btrace-plugin-okhttp3" options="-parameters" />
       <module name="btrace-plugin-servlet25" options="-parameters" />

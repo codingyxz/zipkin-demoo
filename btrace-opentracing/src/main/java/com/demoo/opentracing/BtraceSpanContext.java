@@ -1,14 +1,17 @@
 package com.demoo.opentracing;
 
 import io.opentracing.SpanContext;
+import lombok.Data;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * span上下文内容保持器
  * @author zhxy
  * @Date 2021/6/27 2:52 下午
  */
+@Data
 public class BtraceSpanContext implements SpanContext {
 
     protected static final byte flagSampled = 1;
@@ -19,26 +22,6 @@ public class BtraceSpanContext implements SpanContext {
     private String parentId;
     private byte flags;
     private Map<String, String> baggages;
-
-    @Override
-    public String toTraceId() {
-        return traceId;
-    }
-
-    @Override
-    public String toSpanId() {
-        return spanId;
-    }
-
-
-    public static BtraceSpanContext buildChildSpanContext(BtraceSpanContext parentBtraceSpanContext, BtraceTracer tracer) {
-        return new BtraceSpanContext(
-                parentBtraceSpanContext.getTraceId(),
-                tracer.getSpanIdGenerator().getId(),
-                parentBtraceSpanContext.getSpanId(),
-                parentBtraceSpanContext.getFlags(),
-                parentBtraceSpanContext.getBaggages());
-    }
 
     public BtraceSpanContext(String traceId, String spanId, String parentId, byte flags) {
         this(traceId, spanId, parentId, flags, new HashMap<>(0));
@@ -53,30 +36,28 @@ public class BtraceSpanContext implements SpanContext {
     }
 
     @Override
+    public String toTraceId() {
+        return traceId;
+    }
+
+    @Override
+    public String toSpanId() {
+        return spanId;
+    }
+
+    @Override
     public Iterable<Map.Entry<String, String>> baggageItems() {
         Map<String, String> baggageMap = new HashMap<String, String>(baggages);
         return baggageMap.entrySet();
     }
 
-
-    public String getTraceId() {
-        return traceId;
-    }
-
-    public String getSpanId() {
-        return spanId;
-    }
-
-    public String getParentId() {
-        return parentId;
-    }
-
-    public byte getFlags() {
-        return flags;
-    }
-
-    public Map<String, String> getBaggages() {
-        return baggages;
+    public static BtraceSpanContext buildChildSpanContext(BtraceSpanContext parentBtraceSpanContext, BtraceTracer tracer) {
+        return new BtraceSpanContext(
+                parentBtraceSpanContext.getTraceId(),
+                tracer.getSpanIdGenerator().getId(),
+                parentBtraceSpanContext.getSpanId(),
+                parentBtraceSpanContext.getFlags(),
+                parentBtraceSpanContext.getBaggages());
     }
 
     public boolean isSampled() {

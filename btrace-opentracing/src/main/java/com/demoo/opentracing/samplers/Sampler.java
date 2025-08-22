@@ -1,5 +1,8 @@
 package com.demoo.opentracing.samplers;
 
+/**
+ * 采样器
+ */
 public abstract class Sampler {
 
     public abstract boolean isSampled(String traceId);

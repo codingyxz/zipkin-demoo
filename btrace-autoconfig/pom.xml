@@ -103,6 +103,13 @@
             <optional>true</optional>
         </dependency>
 
+        <dependency>
+            <groupId>com.zipkin</groupId>
+            <artifactId>btrace-plugin-logback</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
         <dependency>
             <groupId>javax.validation</groupId>

@@ -19,7 +19,7 @@ public interface HttpRequestSpanDecorator<req, resp, add> {
     void onRequest(req request, add addition, Span span);
 
     /**
-     * 相应后调用
+     * 响应后调用
      *
      * @param response 响应对象
      * @param span

@@ -24,7 +24,8 @@ public class SpanUtils {
     public static final String EVENT_TIMEOUT = "timeout";
     public static final String EMPTY = "";
     public static final String ERROR_CODE = "error.code";
-    public static final String INJECT_SPAN_NAME="inject_agent_span";
+    public static final String INJECT_SPAN_NAME = "inject_agent_span";
+
     /**
      * 并不标注error=true，表示这种异常是一种业务异常，便于后面定位问题
      *
@@ -82,20 +83,9 @@ public class SpanUtils {
     public static void logsForException(Throwable e, Span span) {
         try {
             if (e != null && span != null) {
-//                if (e instanceof ServiceException) {
-//                    ServiceException serviceException = (ServiceException) e;
-//                    Map<String, String> fields = new HashMap<String, String>(1);
-//                    fields.put(SpanUtils.MESSAGE, serviceException.getDetailMessage());
-//                    span.log(fields);
-//                } else if (e instanceof ServiceErrorException) {
-//                    Map<String, String> fields = new HashMap<String, String>(1);
-//                    fields.put(ERROR_CODE, ((ServiceErrorException) e).getCode());
-//                    span.log(fields);
-//                } else {
-                    Tags.ERROR.set(span, Boolean.TRUE);
-                    logsForMessageAndErrorObject(e, span);
-                    logsForStack(e, span);
-//                }
+                Tags.ERROR.set(span, Boolean.TRUE);
+                logsForMessageAndErrorObject(e, span);
+                logsForStack(e, span);
             }
         } catch (Throwable e1) {
             Tags.ERROR.set(span, Boolean.TRUE);

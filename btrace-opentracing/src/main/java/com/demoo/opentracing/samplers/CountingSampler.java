@@ -3,10 +3,15 @@ package com.demoo.opentracing.samplers;
 import java.util.BitSet;
 import java.util.Random;
 
+/**
+ * Sampler that samples a fixed percentage of traces.
+ */
 public final class CountingSampler extends Sampler {
 
     /**
-     * @param rate 0 means never sample, 1 means always sample. Otherwise minimum sample rate is 0.01,
+     * @param rate 0 means never sample,
+     *             1 means always sample,
+     *             Otherwise minimum sample rate is 0.01,
      *             or 1% of traces
      */
     public static Sampler create(final float rate) {

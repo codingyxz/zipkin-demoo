@@ -25,6 +25,8 @@
             <version>0.33.0</version>
         </dependency>
 
+
+
         <dependency>
             <groupId>org.jvnet</groupId>
             <artifactId>animal-sniffer-annotation</artifactId>
@@ -49,6 +51,12 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.75</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
         </dependency>
 
 

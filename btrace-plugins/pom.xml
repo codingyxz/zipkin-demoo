@@ -17,6 +17,10 @@
         <module>btrace-plugin-spring-service</module>
         <module>btrace-plugin-servlet3</module>
         <module>btrace-plugin-mybatis</module>
+        <module>btrace-plugin-dubbo</module>
+        <module>btrace-plugin-servlet25</module>
+        <module>btrace-plugin-springmvc</module>
+        <module>btrace-plugin-logback</module>
     </modules>
 
     <properties>

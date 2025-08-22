@@ -20,11 +20,6 @@ public class JsonCodec implements Codec {
 
     private static final Logger LOGGER = Logger.getLogger(JsonCodec.class.getName());
 
-    public static final String LINE_SEPARATOR = "line.separator";
-    public static final String BAGGAGE_PREFIX = "baggage.";
-
-    zipkin2.internal.JsonCodec jsonCodec = new zipkin2.internal.JsonCodec();
-
     private int byteSize;
     private int maxSpanByteSize;
     private List<JsonSpan> jsonSpanList;
@@ -71,7 +66,6 @@ public class JsonCodec implements Codec {
 
         return jsonSpan;
     }
-
 
     private void setTagsAndBaggages(SpanData spanData, JsonSpan jsonSpan) {
         if (spanData.getTags() != null && spanData.getTags().size() > 0) {
